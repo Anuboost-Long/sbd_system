@@ -1,0 +1,5 @@
+Services/Customers/Functions/PhoneLengthData.cs is generated from PhoneNumberMetadata.xml (v9.0.44) of libphonenumber
+https://github.com/google/libphonenumber
+Licensed under the Apache License, Version 2.0, Copyright (C) The Libphonenumber Authors.
+Only the allowed national-number lengths per country calling code are used (fixed-line and mobile); the library is not a dependency.
+Regenerate with: python3 scripts/generate_phone_table.py PhoneNumberMetadata.xml <version> > SBD.API/Services/Customers/Functions/PhoneLengthData.cs

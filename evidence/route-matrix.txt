@@ -1,0 +1,17 @@
+ route                                             anon  Normal  Account  Privil  UserAdm
+ POST customers/search                               401    200    200    200    403
+ POST customers/{id:int}/card/reveal                 401    403    404    404    403
+ GET localities                                      401    200    200    200    403
+ POST admin/users                                    401    403    403    403    400
+ POST admin/users/{id}/role                          401    403    403    403    404
+ POST admin/users/{id}/disable                       401    403    403    403    404
+ POST admin/users/{id}/password-reset                401    403    403    403    404
+ POST admin/users/{id}/mfa-reset                     401    403    403    403    404
+ POST admin/users/{id}/search-unlock                 401    403    403    403    404
+ GET auth/me                                         401    200    200    200    200
+ POST auth/change-password                           401    400    400    400    400
+ POST auth/logout                                    401    204    204    204    204
+ POST auth/login                                     401    401    401    401    401
+ POST auth/mfa/setup                                 401    401    401    401    401
+ POST auth/mfa/confirm                               401    401    401    401    401
+ POST auth/mfa                                       401    401    401    401    401

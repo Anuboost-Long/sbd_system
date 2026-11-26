@@ -1,0 +1,17 @@
+bin/
+obj/
+.env
+.env.*
+!.env.example
+/Log
+certs/
+publish/
+.next/
+node_modules/
+*.log
+review_package/
+report/
+*.zip
+.DS_Store
+*.tsbuildinfo
+.vscode/

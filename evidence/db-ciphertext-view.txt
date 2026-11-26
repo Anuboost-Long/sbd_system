@@ -1,0 +1,5 @@
+CustomerId|LastName|CardLast4|MedicalStatusEnc|CardNumberEnc|CardExpiryEnc|medLen|cardLen
+----------|--------|---------|----------------|-------------|-------------|------|-------
+3|O'Brien|1111|v1:PtLE7+Lcez7ahMgWTQJ0I2d8Ee4|v1:HliRlIu+4gNEmS/pjd7/GmDSkY/|v1:XR4DDyfx3inYEWvI4nJYlXWuNFw|43|67
+4|Thomas|1881|v1:1ozzL5EvDuSofa6veO4l74tJC0H|v1:jJzVNUzJRJdl1ocBfkLF9DwMvXU|v1:vsHGCOKYajhJ5GRwGhNe7TD9qou|43|67
+5|O'Brien|4444|v1:JgFPPfHVL4z05Ctbn/3RSQoTROv|v1:K9ANEyA8LAqZtIDMqRjOThAb9M2|v1:3ihh02vhvKk4oi5YzIoZwiAc8x7|43|67

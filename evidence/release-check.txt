@@ -1,0 +1,6 @@
+1/5 build with warnings as errors
+2/5 tests (authorisation, injection, route matrix)
+3/5 vulnerable packages
+4/5 raw SQL
+5/5 secrets
+OK: release checks passed

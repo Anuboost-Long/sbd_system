@@ -1,0 +1,76 @@
+Changed database context to 'AuthDb'.
+UserName PasswordHashStart HashLength
+-------- ----------------- ----------
+accounting.user AQAAAAIACSfAAAAAEC6HYhdABxslrqdGcXfCw6Eo... 84
+demo.locked AQAAAAIACSfAAAAAEHtoI5/g+ZG1p8a9rC0GpLLh... 84
+demo.person AQAAAAIACSfAAAAAEA3IqrgA7DRkFolUwDHPjsL1... 84
+demo.third AQAAAAIACSfAAAAAEMTeHDCrKnl3JgGnuXazzMiN... 84
+normal.user AQAAAAIACSfAAAAAEC49HgbUkpMKQFleE6VtX8Yl... 84
+privileged.user AQAAAAIACSfAAAAAEIkdgCsK/cvHqmnEgEsrL1iL... 84
+user.admin AQAAAAIACSfAAAAAENdwG/GWDvun3SYb4GRpfg/V... 84
+
+(7 rows affected)
+SessionId UserId TokenHashHex HashBytes CreatedUtc AbsoluteExpiryUtc RevokedUtc
+--------- ------ ------------ --------- ---------- ----------------- ----------
+122 727cd370-43fb-40fa-9fe6-318a4e9d91ff 0x3040CE51675B0992F0A56724608775DFA3B05CF69FFB56BAC163CA112BF8D371 32 2026-11-25 14:47:15 2026-11-25 22:47:15 2026-11-25 14:48:14
+121 7d19e610-d1b4-48c9-8aaf-41428bc23f0c 0x59E913D207189117C5C15F1BC422ADD2FA786B2A43754DB296E413C6858CD6FD 32 2026-11-25 14:46:41 2026-11-25 22:46:41 2026-11-25 14:47:03
+120 6fa18cb4-86d4-44be-be6a-465b3f34f222 0x794789DCE81E6E620FD7FB75B61EA8CEF9F6ACAC10C3AA6F46E018F2E023CE37 32 2026-11-25 14:45:09 2026-11-25 22:45:09 2026-11-25 14:46:31
+119 620e4577-724a-4c1c-b1e7-c3681a193cdc 0x9FDA7FF3EC528974D0B0E77B1BA83EECBB4583030725307543551C44257DA319 32 2026-11-25 14:43:42 2026-11-25 22:43:42 2026-11-25 14:44:22
+118 727cd370-43fb-40fa-9fe6-318a4e9d91ff 0x367C787718E7D7C81E0EA94363F868874ECA4DF1231D38BD46498211A10506C1 32 2026-11-25 14:39:13 2026-11-25 22:39:13 2026-11-25 14:39:14
+
+(5 rows affected)
+Changed database context to 'CustomerDb'.
+CustomerId LastName CardLast4 MedicalStatusEnc MedicalLen CardNumberEncStart CardLen CardExpiryEncStart ExpiryLen
+---------- -------- --------- ---------------- ---------- ------------------ ------- ------------------ ---------
+3 O'Brien 1111 v1:3HAEL/p8tMyrGyTOk/Fywc0pKTrWj8c8g05MNxw= 43 v1:mtm5yWOaZ9i19vCTyj2yubLoD3d... 67 v1:QpAsi19k4x+4Cyc/TRceIhuiLIh... 47
+4 Thomas 1881 v1:RcMs4w1fvbCJkF7iGCsOx3nl+urZSMaIA/+cHsU= 43 v1:wZ/0m6z3PR2wi+480ncHoLulLDQ... 67 v1:GmvyD5YKGxZe+9CdFh99FC6iC/5... 47
+5 O'Brien 4444 v1:qzJS0mwHGRgq2G8VClVmNYS312C57+dcNXSXDFU= 43 v1:pnLmU0l2vXtEEUBLHhE1jL/TwLo... 67 v1:RuIqslptgNByFTdT94GGP99X/QI... 47
+6 White 5100 v1:3RWjTxzT5T0ZJ/T0l+ysoLA521SftqT0GBnauUg= 43 v1:amNg6cdOLm/DDX4xDrA0YukZxau... 67 v1:HHY8Wl5uWylwusQ30ziO/Hl5AUr... 47
+7 O'Brien 0005 v1:HmsyPlU4/dX3y4U3Qu5MtUIu8zvJPpKBh1xhbkg= 43 v1:wMtl1jhkrY/cp9leSb6UG6Tjo+q... 67 v1:rc/nmFj5wa5A2TksoS/0yHuEGVb... 47
+
+(5 rows affected)
+Changed database context to 'AuthDb'.
+AuditId OccurredUtc Action Outcome ActorUserId TargetUserId TargetCustomerId ApprovalRef ClientIp
+------- ----------- ------ ------- ----------- ------------ ---------------- ----------- --------
+243 2026-11-25 14:48:14.496 Logout Success 727cd370-43fb-40fa-9fe6-318a4e9d91ff NULL NULL NULL ::ffff:172.17.0.1
+242 2026-11-25 14:48:03.234 RoleAssigned Success 727cd370-43fb-40fa-9fe6-318a4e9d91ff 209abc8d-2aa5-4178-b935-f4172b45a66a NULL CHG-2002 ::ffff:172.17.0.1
+241 2026-11-25 14:47:37.716 UserCreated Success 727cd370-43fb-40fa-9fe6-318a4e9d91ff 209abc8d-2aa5-4178-b935-f4172b45a66a NULL CHG-2001 ::ffff:172.17.0.1
+240 2026-11-25 14:47:15.113 LoginSucceeded Success 727cd370-43fb-40fa-9fe6-318a4e9d91ff NULL NULL NULL ::ffff:172.17.0.1
+239 2026-11-25 14:47:03.374 Logout Success 7d19e610-d1b4-48c9-8aaf-41428bc23f0c NULL NULL NULL ::ffff:172.17.0.1
+238 2026-11-25 14:46:43.797 MedicalViewed Success 7d19e610-d1b4-48c9-8aaf-41428bc23f0c NULL 13 NULL ::ffff:172.17.0.1
+237 2026-11-25 14:46:43.797 MedicalViewed Success 7d19e610-d1b4-48c9-8aaf-41428bc23f0c NULL 21 NULL ::ffff:172.17.0.1
+236 2026-11-25 14:46:41.666 LoginSucceeded Success 7d19e610-d1b4-48c9-8aaf-41428bc23f0c NULL NULL NULL ::ffff:172.17.0.1
+235 2026-11-25 14:46:31.170 Logout Success 6fa18cb4-86d4-44be-be6a-465b3f34f222 NULL NULL NULL ::ffff:172.17.0.1
+234 2026-11-25 14:46:06.010 CardRevealed Success 6fa18cb4-86d4-44be-be6a-465b3f34f222 NULL 21 NULL ::ffff:172.17.0.1
+233 2026-11-25 14:45:43.241 CardRevealed Success 6fa18cb4-86d4-44be-be6a-465b3f34f222 NULL 21 NULL ::ffff:172.17.0.1
+232 2026-11-25 14:45:19.548 CardRevealed Success 6fa18cb4-86d4-44be-be6a-465b3f34f222 NULL 21 NULL ::ffff:172.17.0.1
+231 2026-11-25 14:45:09.095 LoginSucceeded Success 6fa18cb4-86d4-44be-be6a-465b3f34f222 NULL NULL NULL ::ffff:172.17.0.1
+230 2026-11-25 14:44:22.298 Logout Success 620e4577-724a-4c1c-b1e7-c3681a193cdc NULL NULL NULL ::ffff:172.17.0.1
+229 2026-11-25 14:43:42.752 LoginSucceeded Success 620e4577-724a-4c1c-b1e7-c3681a193cdc NULL NULL NULL ::ffff:172.17.0.1
+228 2026-11-25 14:40:18.046 LoginFailed Failure ffaae553-053e-4c9a-8dbf-7ca0b0f9ed5d NULL NULL NULL ::ffff:172.17.0.1
+227 2026-11-25 14:40:17.806 LoginFailed Failure ffaae553-053e-4c9a-8dbf-7ca0b0f9ed5d NULL NULL NULL ::ffff:172.17.0.1
+226 2026-11-25 14:40:17.802 AccountLocked Denied ffaae553-053e-4c9a-8dbf-7ca0b0f9ed5d NULL NULL NULL ::ffff:172.17.0.1
+225 2026-11-25 14:40:17.492 LoginFailed Failure ffaae553-053e-4c9a-8dbf-7ca0b0f9ed5d NULL NULL NULL ::ffff:172.17.0.1
+224 2026-11-25 14:40:17.103 LoginFailed Failure ffaae553-053e-4c9a-8dbf-7ca0b0f9ed5d NULL NULL NULL ::ffff:172.17.0.1
+223 2026-11-25 14:40:16.898 LoginFailed Failure ffaae553-053e-4c9a-8dbf-7ca0b0f9ed5d NULL NULL NULL ::ffff:172.17.0.1
+222 2026-11-25 14:40:16.677 LoginFailed Failure ffaae553-053e-4c9a-8dbf-7ca0b0f9ed5d NULL NULL NULL ::ffff:172.17.0.1
+221 2026-11-25 14:39:14.359 Logout Success 727cd370-43fb-40fa-9fe6-318a4e9d91ff NULL NULL NULL ::ffff:172.17.0.1
+220 2026-11-25 14:39:14.329 AccessDenied Denied 727cd370-43fb-40fa-9fe6-318a4e9d91ff 727cd370-43fb-40fa-9fe6-318a4e9d91ff NULL NULL ::ffff:172.17.0.1
+219 2026-11-25 14:39:13.936 UserDisabled Success 727cd370-43fb-40fa-9fe6-318a4e9d91ff b3034e90-6501-4c1c-8d49-99d4cd691761 NULL CHG-1003 ::ffff:172.17.0.1
+218 2026-11-25 14:39:13.906 RoleAssigned Success 727cd370-43fb-40fa-9fe6-318a4e9d91ff b3034e90-6501-4c1c-8d49-99d4cd691761 NULL CHG-1002 ::ffff:172.17.0.1
+217 2026-11-25 14:39:13.805 UserCreated Success 727cd370-43fb-40fa-9fe6-318a4e9d91ff ffaae553-053e-4c9a-8dbf-7ca0b0f9ed5d NULL CHG-1004 ::ffff:172.17.0.1
+216 2026-11-25 14:39:13.567 UserCreated Success 727cd370-43fb-40fa-9fe6-318a4e9d91ff b3034e90-6501-4c1c-8d49-99d4cd691761 NULL CHG-1001 ::ffff:172.17.0.1
+215 2026-11-25 14:39:13.260 LoginSucceeded Success 727cd370-43fb-40fa-9fe6-318a4e9d91ff NULL NULL NULL ::ffff:172.17.0.1
+214 2026-11-25 14:38:10.932 Logout Success 7d19e610-d1b4-48c9-8aaf-41428bc23f0c NULL NULL NULL ::ffff:172.17.0.1
+
+(30 rows affected)
+AlertId RaisedUtc UserId AlertType ResolvedByUserId ResolvedUtc
+------- --------- ------ --------- ---------------- -----------
+18 2026-11-25 14:48:03 209abc8d-2aa5-4178-b935-f4172b45a66a PrivilegedRoleAssigned NULL NULL
+17 2026-11-25 14:47:38 209abc8d-2aa5-4178-b935-f4172b45a66a RoleAssigned NULL NULL
+16 2026-11-25 14:40:18 ffaae553-053e-4c9a-8dbf-7ca0b0f9ed5d AccountLocked NULL NULL
+15 2026-11-25 14:39:14 b3034e90-6501-4c1c-8d49-99d4cd691761 PrivilegedRoleAssigned NULL NULL
+14 2026-11-25 14:39:14 ffaae553-053e-4c9a-8dbf-7ca0b0f9ed5d RoleAssigned NULL NULL
+13 2026-11-25 14:39:14 b3034e90-6501-4c1c-8d49-99d4cd691761 RoleAssigned NULL NULL
+
+(6 rows affected)

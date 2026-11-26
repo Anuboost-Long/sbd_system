@@ -1,0 +1,12 @@
+PASS DB1 app_view_normal blocked from dbo.Customers: The SELECT permission was denied on the object 'Customers', database 'CustomerDb', schema 'dbo'.
+PASS DB2 app_view_normal blocked from vw_Privileged: The SELECT permission was denied on the object 'vw_Privileged', database 'CustomerDb', schema 'dbo'.
+PASS DB3 app_view_accounting blocked from medical view: The SELECT permission was denied on the object 'vw_Privileged', database 'CustomerDb', schema 'dbo'.
+PASS DB4 app_view_privileged cannot modify data: The SELECT permission was denied on the object 'Customers', database 'CustomerDb', schema 'dbo'.
+PASS DB5 vw_Normal has no card or medical columns
+PASS DB-V CHECK constraint rejected <script> name: The INSERT statement conflicted with the CHECK constraint "CK_Customers_FirstName". The conflict occurred in database "
+PASS DB7 separation of duties blocked: Separation of duties: UserAdmin cannot hold customer permissions and data roles cannot hold user-admin permissions.
+PASS DB8 one role per user enforced: Cannot insert duplicate key row in object 'dbo.AspNetUserRoles' with unique index 'UX_AspNetUserRoles_OneRolePerUser'. The duplicate 
+PASS DB9 audit log is append-only: The UPDATE permission was denied on the object 'AuditLog', database 'AuthDb', schema 'dbo'.
+PASS DB10 permission matrix is read-only to the API: The INSERT permission was denied on the object 'RolePermissions', database 'AuthDb', schema 'dbo'.
+PASS DB11 approval reference required: The INSERT statement conflicted with the CHECK constraint "CK_AuditLog_RoleChangeHasApproval". The conflict occurred in database "A
+PASS DB12 self role change blocked: The INSERT statement conflicted with the CHECK constraint "CK_AuditLog_NoSelfAdmin". The conflict occurred in database "AuthDb", table

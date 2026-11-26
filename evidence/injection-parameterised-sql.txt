@@ -1,0 +1,6 @@
+      Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__last_Value_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(@__p_1) [v].[CustomerId], [v].[FirstName], [v].[LastName], [v].[Phone], [v].[Postcode], [v].[State], [v].[Street], [v].[Suburb], [v].[Unit]
+      FROM [vw_Normal] AS [v]
+      WHERE [v].[LastName] = @__last_Value_0
+      ORDER BY [v].[LastName], [v].[FirstName], [v].[CustomerId]
+[xUnit.net 00:00:02.31]   Finished:    SBD.API.Tests

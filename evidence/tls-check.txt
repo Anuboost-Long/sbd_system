@@ -1,0 +1,12 @@
+TLS check, Guide §2.3 (control E7). Run 25 Nov 2026.
+API published and run in a Linux container (mcr.microsoft.com/dotnet/aspnet:8.0), Kestrel SslProtocols = Tls13 only,
+certificate: ECDSA P-384 (secp384r1), self-signed for the demo.
+
+$ openssl s_client -connect localhost:7443 -tls1_2
+  error:0A00042E:SSL routines:ssl3_read_bytes:tlsv1 alert protocol version   (SSL alert number 70)   -> REFUSED
+
+$ openssl s_client -connect localhost:7443 -tls1_3
+  New, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384
+  Peer signature type: ecdsa_secp384r1_sha384                                                       -> ACCEPTED
+
+Note: on macOS the same build refuses TLS 1.2 but cannot serve TLS 1.3 (platform limit), so the check is run in Linux.

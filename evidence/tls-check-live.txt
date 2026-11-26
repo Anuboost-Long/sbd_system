@@ -1,0 +1,13 @@
+TLS check, Guide §2.3 (control E7). Run 25 Nov 2026 15:00 UTC.
+API in a Linux container (mcr.microsoft.com/dotnet/aspnet:8.0), Kestrel SslProtocols = Tls13 only,
+certificate: ECDSA P-384 (secp384r1), self-signed for the demo.
+
+$ openssl s_client -connect localhost:7443 -tls1_2
+  error: tlsv1 alert protocol version   (alert number 70)
+  New, (NONE), Cipher is (NONE)
+  -> REFUSED
+
+$ openssl s_client -connect localhost:7443 -tls1_3
+  Peer signature type: ecdsa_secp384r1_sha384
+  New, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384
+  -> ACCEPTED
